@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Mrs.Right</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<audio autoplay loop id="playAudio" hidden="true">
+    <source src="http://650393.d.yyupload.com/down/650393/2019/10/吴克群 - 为你写诗 128.mp3">
+</audio>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+        	亲爱的江梓燕小姐：<br />
+        	你好！<br />
+            这是第二次为你写信，与第一次的方式不同，这次我选择如此特别的方式，想要让你感受到我对你与众不同的爱❤️</span><br />
+            我觉得我是幸运的，能够遇上你这么善良、温柔、大方、美丽的👧<br />
+            抱歉的是，我没有让你感受恋爱的甜蜜，经常的惹你生气，说话心直口快老是得罪你，我也在努力的改变自己讲话的方式，希望能够让你不那么难受，但更幸运的是，你愿意试着接纳我。<br /><br />
+
+            如果说爱情是最美的童话，有王子也有青蛙，但更美的是有
+            <span class="keyword">我喜爱的你</span><br /><br />
+
+            人们都期望摘到那朵最美的🌹，但我更希望摘的是最喜爱的那朵，因为在我眼中它已是最美，而不在意别人的眼光<br />
+            爱情可能是两情相悦，但我更相信爱不是一种感觉，而是双方恒久委身的❤️<br />
+            感觉在某些时候它会消失，又可能会复现，所以我们能够在不同的人身上获得不同的感觉，所以人们常说不爱了就是没感觉了。<br />
+            但真实的爱，它并非感觉，更多是一种责任，是
+            <span class="keyword">我们彼此的牺牲与成就</span><br /><br />
+
+            我想和你一起，<br />
+            看日出，观晚霞<br />
+            穿过教堂和人海<br />
+            分享所有的喜悦、欢乐和笑脸<br />
+            还想为你承担<br />
+            所有的烦恼、痛苦和眼泪<br />
+            爱情不全是开心，但伤心我们也要<span class="keyword">一起面对，宝</span><br /><br />
+
+             <hr />
+   			<span class="keyword">我亲爱的:</span><br />
+			江梓燕<br />
+            <span class="keyword">我爱你</span><br />
+            -- 杨楚东<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相知，相识，相恋，相爱...
+					<div id="elapseClock"></div>
+				</div>
+<!--			<div id="loveu">
+					<br/>
+					<div class="signature">- 钟先森</div>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+together.setFullYear(2022, 3, 17);//1.23；3.29
+together.setHours(18);
+together.setMinutes(59);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>小丑鱼送给他家的宝<a href="https://github.com/enfangzhong" target="_blank"><a /></p>
+<p>Copyright © 2022 - 9999. All Rights Reserved. Designed by 小丑鱼<a href="https://github.com/enfangzhong" target="_blank"><a /> </p>
+</div>
+</body>
+</html>
