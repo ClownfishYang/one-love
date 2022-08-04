@@ -20,9 +20,7 @@
 
 <body>
 
-<audio autoplay loop id="playAudio" hidden="true">
-    <source src="http://650393.d.yyupload.com/down/650393/2019/10/吴克群 - 为你写诗 128.mp3">
-</audio>
+<audio id="bgmusic" src="http://650393.d.yyupload.com/down/650393/2019/10/吴克群 - 为你写诗 128.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
 
 <div id="mainDiv">
 	<div id="content">
@@ -65,11 +63,11 @@
 					相知，相识，相恋，相爱...
 					<div id="elapseClock"></div>
 				</div>
-<!--			<div id="loveu">
+			<div id="loveu">
 					<br/>
-					<div class="signature">- 钟先森</div>
+					<div class="signature">- 杨楚东</div>
 				</div>
--->
+
 			</div>
 		</div>
 	</div>
@@ -85,6 +83,18 @@ together.setHours(18);
 together.setMinutes(59);
 together.setSeconds(0);
 together.setMilliseconds(0);
+
+ function toggleSound() {
+            var music = document.getElementById("bgmusic");//获取ID
+                console.log(music);
+                console.log(music.paused);
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            }
+
+        }
+setInterval("toggleSound()",1);
 
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
